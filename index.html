@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Meal</title>
+	
+	<!-- FAVICONS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="transparent">
+	<meta name="msapplication-TileColor" content="#ffab08">
+	<meta name="theme-color" content="transparent">
+	
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+	
+	<!-- CSS -->
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="wrapper-height">
+		
+		<header class="header">
+			<div class="wrapper">
+				<svg class="logo header__logo" viewBox="0 0 305 68" role="img" aria-label="Your Meal Logo" title="Your Meal">
+					<use href="img/sprite.svg#logo"/>
+				</svg>
+				<div class="header__content">
+					<div class="header__title-box">
+						<h1 class="title header__title" title="Только самые сочные бургеры!">
+							<span class="header__title-top-part">Только самые</span>
+							<br>
+							<span class="header__title-bottom-part">сочные бургеры!</span>
+						</h1>
+						<p class="subtitle header__subtitle" title="Бесплатная доставка от 599₽">
+							Бесплатная доставка от 599₽
+						</p>
+					</div>
+					<img class="header__image" src="images/header/header-burger.svg" alt="Your Meal Burger Image">
+				</div>
+			</div>
+		</header>
+
+
+		<main class="main">
+			
+			<nav class="navigation">
+				<div class="wrapper wrapper--navigation">
+					<ul class="navigation__list">
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--burgers navigation__bttn--active" data-button="content-001">
+								Бургеры
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--snacks" data-button="content-002">
+								Закуски
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--hotdogs" data-button="content-003">
+								Хот-доги
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--combo" data-button="content-004">
+								Комбо
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--burrito" data-button="content-005">
+								Шаурма
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--pizza" data-button="content-006">
+								Пицца
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--wok" data-button="content-007">
+								Вок
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--desserts" data-button="content-008">
+								Десерты
+							</button>
+						</li>
+						<li class="navigation__item">
+							<button class="navigation__bttn navigation__bttn--sauces" data-button="content-009">
+								Соусы
+							</button>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<div class="wrapper">
+				<div class="catalog">
+					<aside class="cart">
+						<div class="cart-title__box">
+							<h2 class="cart-title">
+								Корзина
+							</h2>
+							<div class="cart-title__box-total-count">
+								0
+							</div>
+						</div>
+						<div class="cart-content">
+							<div class="cart-content__empty-line">
+								Тут пока пусто :(
+							</div>
+							<div class="cart-content__full">
+								<div class="cart-content__item">
+									<img class="cart-content__item-image" src="images/catalog/burgers/burgers-photo--002.png" alt="">
+									<div class="cart-content__item-box">
+										<div class="cart-content__item-name">
+											Супер сырный
+										</div>
+										<div class="cart-content__item-weight">
+											<span class="cart-content__item-weight-num">
+												512
+											</span>
+											<span class="cart-content__item-weight-measure">
+												г
+											</span>
+										</div>
+										<div class="cart-content__item-price">
+											<span class="cart-content__item-price-num">
+												550
+											</span>
+											<span class="cart-content__item-price-currency">
+												&#8381;
+											</span>
+										</div>
+									</div>
+									<div class="cart-content__item-counter">
+										<button class="cart-content__item-counter-bttn cart-content__item-counter-bttn--minus" title="Уменьшить количество товаров">
+											-
+										</button>
+										<input class="cart-content__item-counter-num" type="number" min="1" max="100" step="1" value="1" tabindex="-1" readonly>
+										<button class="cart-content__item-counter-bttn cart-content__item-counter-bttn--plus" title="Увеличить количество товаров">
+											+
+										</button>
+									</div>
+									
+									<div class="cart-content__item-close" title="Убрать товар из корзины">
+										&times;
+									</div>
+								</div>
+								<div class="cart-content__item">
+									<img class="cart-content__item-image" src="images/catalog/burgers/burgers-photo--002.png" alt="">
+									<div class="cart-content__item-box">
+										<div class="cart-content__item-name">
+											Супер сырный
+										</div>
+										<div class="cart-content__item-weight">
+											<span class="cart-content__item-weight-num">
+												512
+											</span>
+											<span class="cart-content__item-weight-measure">
+												г
+											</span>
+										</div>
+										<div class="cart-content__item-price">
+											<span class="cart-content__item-price-num">
+												550
+											</span>
+											<span class="cart-content__item-price-currency">
+												&#8381;
+											</span>
+										</div>
+										
+										<div class="cart-content__item-close" title="Убрать товар из корзины">
+											&times;
+										</div>
+									</div>
+									<div class="cart-content__item-counter">
+										<button class="cart-content__item-counter-bttn cart-content__item-counter-bttn--minus" title="Уменьшить количество товаров">
+											-
+										</button>
+										<input class="cart-content__item-counter-num" type="number" min="1" max="100" step="1" value="1" tabindex="-1" readonly>
+										<button class="cart-content__item-counter-bttn cart-content__item-counter-bttn--plus" title="Увеличить количество товаров">
+											+
+										</button>
+									</div>
+								</div>
+								<div class="cart-content__total">
+									<div class="cart-content__total-line" title="Итого">
+										Итого
+									</div>
+									<div class="cart-content__total-amount">
+										<span class="cart-content__total-amount-num">
+
+										</span>
+										<span class="cart-content__total-amount-currency">
+											1100&#8381;
+										</span>
+									</div>
+								</div>
+								<button class="cart-content__button-order" title="Оформить заказ">
+									Оформить заказ
+								</button>
+								<div class="cart-content__delivery-box">
+									<div class="cart-content__delivery">
+										Бесплатная доставка
+									</div>
+									<button class="cart-minimize" title="Свернуть">
+										Свернуть
+									</button>
+								</div>
+							</div>
+						</div>
+					</aside>
+					
+					<section class="catalog-content catalog-content--active" id="content-001">
+						<h2 class="catalog-title">
+							Бургеры
+						</h2>
+						<div class="catalog-content__inner">
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--001.png" alt="" title="Мясная бомба">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										689
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Мясная бомба">
+										Мясная бомба
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Супер мясное наслаждение! Большая рубленая котлета из свежего говяжего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										520
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										430
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--002.png" alt="" title="Супер сырный">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										550
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Супер сырный">
+										Супер сырный
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Мы знаем секрет аппетитного, вкусного и очень сырного бургера. Классический чеддер, пышные и мягкие сырные булочки, котлета из фермерской говядины, жареный бекон, свежие помидоры и любимый соус.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										512
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										450
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--003.png" alt="" title="Сытный">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										639
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Сытный">
+										Сытный
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Сочное куриное мясо крупной рубки, обжаренное до золотистой корочки, вкус которого подчеркивает нежный сливочно-грибной соус. Аппетитная сочная котлета из отборной свинины и говядины, приправленная натуральными специями.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										580
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										470
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--004.png" alt="" title="Тяжелый удар">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										480
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Тяжелый удар">
+										Тяжелый удар
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Самый вкусный бургер! И это не шутка!.. Булочка бриошь, сочная котлета из мраморной говядины, свежие помидоры, листья салата, маринованные огурчики, красный лук, сыры чеддер и моцарелла, заправка крем-соусом унаги и крем-соусом барбекю &mdash; идеальное сочетание в одном бургере!
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										470
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										510
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--005.png" alt="" title="Вечная классика">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										450
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Вечная классика">
+										Вечная классика
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Сытный чизбургер с домашней булочкой бриошь, сочной котлетой из фермерского мяса, свежим салатом, с подплавленным сыром чеддер, маринованными огурцами, свежим красным луком и пикантным &laquo;техасским&raquo; соусом с насыщенным ароматом копчения.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										450
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										450
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/burgers/burgers-photo--006.png" alt="" title="Итальянский">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										560
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Итальянский">
+										Итальянский
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Фирменный бургер с нежными булочками с кунжутом, сочной котлетой из говядины, хрустящими чипсами из индейки, свежим салатом цезарь, сыром моцарелла, заправленный фирменный соусом с трюфельным маслом.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										510
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										540
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+						</div>
+					</section>
+					
+					<section class="catalog-content" id="content-002">
+						<h2 class="catalog-title">
+							Закуски
+						</h2>
+						<div class="catalog-content__inner">
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/snacks/snacks-photo--001.png" alt="" title="Начос">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										250
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Начос">
+										Начос
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Не просто чипсы, а чипсы с характером &mdash; настоящие мексиканские мачо! Как и много лет назад, мы готовим их из кукурузы, которую вымачивают, а затем размалывают каменными жерновами.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										220
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										230
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+							
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/snacks/snacks-photo--002.png" alt="" title="Картошка фри">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										245
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Картошка фри">
+										Картошка фри
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Аппетитная порция классического хрустящего золотистого картофеля фри.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										180
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										360
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+							
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/snacks/snacks-photo--003.png" alt="" title="Луковые кольца">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										230
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Луковые кольца">
+										Луковые кольца
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Хрустящие снеки из лука, нарезанного поперечно в виде колец, которые обмакивают в кляр, обваливают в панировочных сухарях, а затем обжаривают во фритюре.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										160
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										530
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+						</div>
+					</section>
+										
+					<section class="catalog-content" id="content-003">
+						<h2 class="catalog-title">
+							Хот-доги
+						</h2>
+						<div class="catalog-content__inner">
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/hotdogs/hotdogs-photo--001.png" alt="" title="Домашний хот-дог">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										290
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Домашний хот-дог">
+										Домашний хот-дог
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Экзотичный рецепт, в состав которого входят свежие и маринованные овощи, а также сыр, картофель и различные соусы. 
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										250
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										460
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+							
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/hotdogs/hotdogs-photo--002.png" alt="" title="Жгучий хот-дог">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										239
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Жгучий хот-дог">
+										Жгучий хот-дог
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Кому нравится острое, обязательно придется по вкусу хот-дог с корейской морковью.
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										245
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										470
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+							
+							<article class="catalog-content__item">
+								<button class="catalog-content__item-link-button-image">
+									<img class="catalog-content__item-image" src="images/catalog/hotdogs/hotdogs-photo--003.png" alt="" title="Классический хот-дог">
+								</button>
+								<div class="catalog-content__item-price">
+									<span class="catalog-content__item-price-num">
+										220
+									</span>
+									<span class="catalog-content__item-price-currency">
+										&#8381;
+									</span>
+								</div>
+								<button class="catalog-content__item-link-button-title">
+									<h3 class="catalog-content__item-name" title="Классический хот-дог">
+										Классический хот-дог
+									</h3>
+								</button>
+								<div class="catalog-content__item-description visually-hidden">
+									Легендарное блюдо, настоящая американская классика, олицетворяющая все ключевые идеи быстрого и вкусного питания! 
+								</div>
+								<div class="catalog-content__item-weight">
+									<span class="catalog-content__item-weight-num">
+										215
+									</span>
+									<span class="catalog-content__item-weight-measure">
+										г
+									</span>
+								</div>
+								<div class="catalog-content__item-calories visually-hidden">
+									<span class="catalog-content__item-calories-num">
+										380
+									</span>
+									<span class="catalog-content__item-calories-measure">
+										ккал
+									</span>
+								</div>
+								<button class="catalog-content__item-button" title="Добавить в корзину">
+									Добавить
+								</button>
+							</article>
+						</div>
+					</section>
+														
+				</div>
+			</div>
+		</main>
+
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__inner-top">
+					<svg class="logo footer__logo" viewBox="0 0 305 68" role="img" aria-label="Your Meal Logo" title="Your Meal">
+						<use href="img/sprite.svg#logo"/>
+					</svg>
+
+					<div class="footer__inner-top-content">
+						<div class="footer__phone-wrapper">
+							<div class="footer__wrapper-text footer__phone-wrapper-text">
+								Номер для заказа
+							</div>
+							<div class="footer__phone-wrapper-box">
+								<img class="footer__phone-wrapper-image" src="images/footer/phone.svg" alt="">
+								<a class="footer__phone-wrapper-link" href="tel:+79308333811" title="Позвонить">
+									+7(930)833-38-11
+								</a>
+							</div>
+						</div>
+
+						<div class="footer__socials-wrapper">
+							<div class="footer__wrapper-text footer__socials-wrapper-text">
+								Мы в соцсетях
+							</div>
+							<ul class="footer__socials-wrapper-list">
+								<li class="footer__socials-wrapper-list-item" title="VK">
+									<a href="#" class="footer__socials-wrapper-list-link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+											<g clip-path="url(#clip0_57_2464)">
+												<path d="M18 0C8.05875 0 0 8.05875 0 18C0 27.9412 8.05875 36 18 36C27.9412 36 36 27.9412 36 18C36 8.05875 27.9412 0 18 0ZM24.9225 20.3081C24.9225 20.3081 26.5144 21.8794 26.9062 22.6087C26.9175 22.6237 26.9231 22.6387 26.9269 22.6462C27.0862 22.9144 27.1237 23.1225 27.045 23.2781C26.9137 23.5369 26.4637 23.6644 26.31 23.6756H23.4975C23.3025 23.6756 22.8937 23.625 22.3987 23.2837C22.0181 23.0175 21.6431 22.5806 21.2775 22.155C20.7319 21.5212 20.2594 20.9738 19.7831 20.9738C19.7226 20.9736 19.6625 20.9831 19.605 21.0019C19.245 21.1181 18.7838 21.6319 18.7838 23.0006C18.7838 23.4281 18.4462 23.6737 18.2081 23.6737H16.92C16.4812 23.6737 14.1956 23.52 12.1706 21.3844C9.69187 18.7687 7.46062 13.5225 7.44187 13.4737C7.30125 13.1344 7.59187 12.9525 7.90875 12.9525H10.7494C11.1281 12.9525 11.2519 13.1831 11.3381 13.3875C11.4394 13.6256 11.8106 14.5725 12.42 15.6375C13.4081 17.3737 14.0138 18.0787 14.4994 18.0787C14.5904 18.0777 14.6799 18.0545 14.76 18.0112C15.3937 17.6587 15.2756 15.3994 15.2475 14.9306C15.2475 14.8425 15.2456 13.92 14.9212 13.4775C14.6887 13.1569 14.2931 13.035 14.0531 12.99C14.1503 12.856 14.2782 12.7473 14.4262 12.6731C14.8612 12.4556 15.645 12.4237 16.4231 12.4237H16.8563C17.7 12.435 17.9175 12.4894 18.2231 12.5662C18.8419 12.7144 18.855 13.1137 18.8006 14.4806C18.7838 14.8687 18.7669 15.3075 18.7669 15.825C18.7669 15.9375 18.7612 16.0575 18.7612 16.185C18.7425 16.8806 18.72 17.67 19.2112 17.9944C19.2753 18.0346 19.3494 18.056 19.425 18.0562C19.5956 18.0562 20.1094 18.0562 21.5006 15.6694C21.9297 14.9011 22.3025 14.1028 22.6162 13.2806C22.6444 13.2319 22.7269 13.0819 22.8244 13.0237C22.8963 12.9871 22.9761 12.9684 23.0569 12.9694H26.3962C26.76 12.9694 27.0094 13.0237 27.0562 13.1644C27.1387 13.3875 27.0412 14.0681 25.5169 16.1325L24.8362 17.0306C23.4544 18.8419 23.4544 18.9338 24.9225 20.3081Z" fill="#FF7020"/>
+											</g>
+											<defs>
+												<clipPath id="clip0_57_2464">
+													<rect width="36" height="36" fill="white"/>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__socials-wrapper-list-item" title="Telegram">
+									<a href="#" class="footer__socials-wrapper-list-link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+											<g clip-path="url(#clip0_57_2466)">
+												<path d="M36 18C36 22.7739 34.1036 27.3523 30.7279 30.7279C27.3523 34.1036 22.7739 36 18 36C13.2261 36 8.64773 34.1036 5.27208 30.7279C1.89642 27.3523 0 22.7739 0 18C0 13.2261 1.89642 8.64773 5.27208 5.27208C8.64773 1.89642 13.2261 0 18 0C22.7739 0 27.3523 1.89642 30.7279 5.27208C34.1036 8.64773 36 13.2261 36 18ZM18.6458 13.2885C16.8952 14.0175 13.3942 15.525 8.14725 17.811C7.29675 18.1485 6.849 18.4815 6.8085 18.8055C6.741 19.3522 7.42725 19.5683 8.361 19.863L8.75475 19.9868C9.67275 20.286 10.9102 20.6348 11.5515 20.6483C12.1365 20.6618 12.7867 20.4233 13.5045 19.9283C18.4072 16.6185 20.9385 14.9467 21.096 14.9107C21.2085 14.8837 21.366 14.8523 21.4695 14.9468C21.5752 15.039 21.564 15.2168 21.5528 15.264C21.4853 15.5542 18.792 18.0562 17.3993 19.3522C16.965 19.7572 16.6567 20.043 16.5938 20.1082C16.455 20.25 16.314 20.3895 16.1707 20.5268C15.3157 21.3503 14.6768 21.9668 16.2045 22.9748C16.9403 23.4608 17.5298 23.859 18.117 24.2595C18.756 24.696 19.395 25.1303 20.223 25.6748C20.4322 25.8098 20.6348 25.956 20.8305 26.0955C21.5753 26.6265 22.248 27.1035 23.0737 27.027C23.5553 26.982 24.0525 26.532 24.3045 25.182C24.9007 21.9938 26.073 15.0885 26.343 12.2423C26.3595 12.0056 26.3497 11.7679 26.3137 11.5335C26.2926 11.3443 26.201 11.17 26.0573 11.0452C25.8525 10.9039 25.6085 10.8307 25.3597 10.836C24.6847 10.8472 23.643 11.2095 18.6458 13.2885Z" fill="#FF7020"/>
+											</g>
+											<defs>
+												<clipPath id="clip0_57_2466">
+													<rect width="36" height="36" fill="white"/>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="footer__inner-bottom">
+					<div class="copyright footer__inner-bottom-text">
+						&#169;&nbsp;YourMeal, 2022
+					</div>
+					<div class="design footer__inner-bottom-text">
+						<a class="design-link" href="#" title="Design: Anastasia Ilina">
+							Design: Anastasia Ilina
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+	
+	<div class="modal modal--product">
+		<div class="modal__main">
+			<h2 class="modal__title" title="Мясная бомба">
+				Мясная бомба
+			</h2>
+			<div class="modal__top">
+				<div class="modal__content">
+					<img class="modal__content-image" src="images/modal/sample.png" alt="">
+					<div class="modal__content-description">
+						<div class="modal__content-text">
+<!--							Супер мясное наслаждение! Большая рубленая котлета из свежего говяжего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.-->
+						</div>
+						<div class="modal__content-constitution">
+							<div class="modal__content-constitution-header">
+								Состав:
+							</div>
+							<ul class="modal__content-constitution-list">
+								<li class="modal__content-constitution-list-item">
+									Пшеничная булочка
+								</li>
+								<li class="modal__content-constitution-list-item">
+									Котлета из говядины
+								</li>
+								<li class="modal__content-constitution-list-item">
+									Красный лук
+								</li>
+								<li class="modal__content-constitution-list-item">
+									Листья салата
+								</li>
+								<li class="modal__content-constitution-list-item">
+									Соус горчичный
+								</li>
+							</ul>
+							<div class="modal__content-constitution-calories">
+								<div class="modal__content-constitution-weight-wrapper">
+									<span class="modal__content-constitution-weight-num">520</span>
+									<span class="modal__content-constitution-weight-measures">г,&nbsp;</span>
+								</div>
+								<div class="modal__content-constitution-calories-wrapper">
+									<span class="modal__content-constitution-calories-num">430</span>
+									<span class="modal__content-constitution-calories-measures">ккал</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bottom">
+				<div class="modal__buttons">
+					<button class="modal__button" title="Добавить в корзину">
+						Добавить
+					</button>
+					<div class="modal__counter">
+						<button class="modal__counter-bttn modal__counter--minus" title="Уменьшить количество товаров">
+							-
+						</button>
+						<input class="modal__counter-counter-num" type="number" min="1" max="100" step="1" value="1" readonly>
+						<button class="modal__counter-bttn modal__counter--plus" title="Увеличить количество товаров">
+							+
+						</button>
+					</div>
+				</div>
+				<div class="modal__price">
+					<span class="modal__price-num">
+						689
+					</span>
+					<span class="modal__price-currency">
+						&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="modal__close" title="Закрыть">
+				&times;
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="modal modal--delivery">
+		
+		<div class="modal__main">
+			<div class="modal__main-wrapper modal__main-wrapper--decorative">
+				<img class="modal__main-wrapper-decorative-image" src="images/modal/form-decorative-image.svg">
+			</div>
+			
+			<div class="modal__main-wrapper">
+				<h3 class="modal__title modal__title--delivery" title="Доставка">
+					Доставка
+				</h3>
+				<form class="modal__form" id="delivery">
+					<fieldset class="modal__form-fieldset">
+						<input class="modal__form-input" type="text" name="name" placeholder="Ваше имя" required>
+						<input class="modal__form-input" type="tel" name="phone" placeholder="Телефон" required>
+					</fieldset>
+
+					<fieldset class="modal__form-fieldset">
+						<label class="modal__form-label" data-label="selfdelivery">
+							<input class="modal__form-input" type="radio" name="delivery-type" value="selfdelivery" checked required>
+							<span class="modal__form-label-text">
+								Самовывоз
+							</span>
+						</label>
+						<label class="modal__form-label" data-label="courier">
+							<input class="modal__form-input" type="radio" name="delivery-type" value="courier">
+							<span class="modal__form-label-text">
+								Доставка
+							</span>
+						</label>
+					</fieldset>
+
+					<fieldset class="modal__form-fieldset modal__form-fieldset--address">
+						<input class="modal__form-input" type="text" name="address" placeholder="Улица, дом, квартира">
+						<div class="modal__form-input-wrapper">
+							<input class="modal__form-input modal__form-input--half" type="number" name="stage" placeholder="Этаж">
+							<input class="modal__form-input modal__form-input--half" type="number" name="keycode" placeholder="Домофон">
+						</div>
+					</fieldset>
+				</form>
+
+				<button class="modal__button" type="submit" form="delivery" title="Оформить">
+					Оформить
+				</button>
+				<div class="modal__close" title="Закрыть">
+					&times;
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- ↓↓↓ SCRIPTS ↓↓↓ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
