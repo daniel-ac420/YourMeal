@@ -29,19 +29,7 @@ $(function(){
 	
 	
 	
-	/* ОПРЕДЕЛЕНИЕ НАПОЛНЕННОСТИ КОРЗИНЫ */
-	
-	var cartContent = $.trim($(".cart-content__item-name").html()).length;
-//	console.log(cartContent);
-//	console.log(typeof cartContent);
-	
-	if (cartContent !== 0) {
-		$(".cart-content__empty-line").toggle();
-		console.log("Корзина не пуста");
-	} else {
-		$(".cart-content__full").toggle();
-		console.log("Корзина пуста");
-	}
+
 	
 	
 	
@@ -260,6 +248,8 @@ $(function(){
 	/* ВЫЗОВ МОДАЛЬНОГО ОКНА ФОРМЫ ЗАКАЗА */
 	
 	$(".cart-content__button-order").on("click", function() {
+		$(".modal--delivery").find(".modal__counter").remove();
+		
 		$(".modal").css("position", "fixed");
 		$(".modal--delivery").css("display", "flex");
 		$(".modal--product").css("display", "none");
@@ -357,36 +347,36 @@ $(function(){
 	
 	/* ИЗМЕНЕНИЕ КОЛИЧЕСТВА ТОВАРА В КОРЗИНЕ */
 	
-	$('.cart-content__item-counter').each(function() {
-	  var spinner = $(this),
-		input = spinner.find('input[type="number"]'),
-		btnUp = spinner.find('.cart-content__item-counter-bttn--plus'),
-		btnDown = spinner.find('.cart-content__item-counter-bttn--minus'),
-		min = input.attr('min'),
-		max = input.attr('max');
-
-	  btnUp.click(function() {
-		var oldValue = parseFloat(input.val());
-		if (oldValue >= max) {
-		  var newVal = oldValue;
-		} else {
-		  var newVal = oldValue + 1;
-		}
-		spinner.find("input").val(newVal);
-		spinner.find("input").trigger("change");
-	  });
-
-	  btnDown.click(function() {
-		var oldValue = parseFloat(input.val());
-		if (oldValue <= min) {
-		  var newVal = oldValue;
-		} else {
-		  var newVal = oldValue - 1;
-		}
-		spinner.find("input").val(newVal);
-		spinner.find("input").trigger("change");
-	  });
-	});
+//	$('.cart-content__item-counter').each(function() {
+//	  var spinner = $(this),
+//		input = spinner.find('input[type="number"]'),
+//		btnUp = spinner.find('.cart-content__item-counter-bttn--plus'),
+//		btnDown = spinner.find('.cart-content__item-counter-bttn--minus'),
+//		min = input.attr('min'),
+//		max = input.attr('max');
+//
+//	  btnUp.click(function() {
+//		var oldValue = parseFloat(input.val());
+//		if (oldValue >= max) {
+//		  var newVal = oldValue;
+//		} else {
+//		  var newVal = oldValue + 1;
+//		}
+//		spinner.find("input").val(newVal);
+//		spinner.find("input").trigger("change");
+//	  });
+//
+//	  btnDown.click(function() {
+//		var oldValue = parseFloat(input.val());
+//		if (oldValue <= min) {
+//		  var newVal = oldValue;
+//		} else {
+//		  var newVal = oldValue - 1;
+//		}
+//		spinner.find("input").val(newVal);
+//		spinner.find("input").trigger("change");
+//	  });
+//	});
 		
 	
 	
@@ -410,33 +400,12 @@ $(function(){
 	
 	
 	
-	/* ПОДСЧЁТ КОЛИЧЕСТВА ТОВАРОВ В КОРЗИНЕ */
-	
-	$(".cart-content__item-counter-bttn").on("click", function() {
-		
-		var totalCount = 0;
-		
-		$(".cart-content__item").each(function() {
-			var count = parseInt($(this).find(".cart-content__item-counter-num").prop("value"));
-//			console.log("count is " + count);
-//			console.log(typeof count);
-			
-			totalCount = totalCount + count;
-//			console.log("totalCount is " + totalCount);
-//			console.log(typeof totalCount);
-		});
-		
-		
-//		console.log("totalCount is " + totalCount);
-//		console.log(typeof totalCount);
-		
-		$(".cart-title__box-total-count").html(totalCount);
-	});
+
 	
 	
 	
 	
-	
+	/* НАЖАТИЕ НА КНОПКУ "ДОБАВИТЬ В КОРЗИНУ" В МОДАЛЬНОМ ОКНЕ ТОВАРА */
 		
 	$(".modal__button").on("click", function() {
 		
@@ -465,6 +434,125 @@ $(function(){
 		$(".cart-content__item-close").on("click", function() {
 			$(this).parents(".cart-content__item").remove();
 		});
+		
+		
+		/* ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА */
+		
+		$(".modal").css("display", "none");
+		
+		
+		/* ИЗМЕНЕНИЕ КОЛИЧЕСТВА ТОВАРА В КОРЗИНЕ */
+	
+		$('.cart-content__item-counter').each(function() {
+		  var spinner = $(this),
+			input = spinner.find('input[type="number"]'),
+			btnUp = spinner.find('.cart-content__item-counter-bttn--plus'),
+			btnDown = spinner.find('.cart-content__item-counter-bttn--minus'),
+			min = input.attr('min'),
+			max = input.attr('max');
+
+		  btnUp.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue >= max) {
+			  var newVal = oldValue;
+			} else {
+			  var newVal = oldValue + 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		  });
+
+		  btnDown.click(function() {
+			var oldValue = parseFloat(input.val());
+			if (oldValue <= min) {
+			  var newVal = oldValue;
+			} else {
+			  var newVal = oldValue - 1;
+			}
+			spinner.find("input").val(newVal);
+			spinner.find("input").trigger("change");
+		  });
+		});
+		
+		
+		/* ПЕРЕСОЗДАНИЕ СЧЁТЧИКА В МОДАЛЬНОМ ОКНЕ ТОВАРА */
+			
+		$(".modal__counter").remove();
+		$('<div class="modal__counter"><button class="modal__counter-bttn modal__counter--minus" title="Уменьшить количество товаров">-</button><input class="modal__counter-counter-num" type="number" min="1" max="100" step="1" value="1" readonly><button class="modal__counter-bttn modal__counter--plus" title="Увеличить количество товаров">+</button></div>').insertAfter(".modal__button");
+
+		
+		/* ИЗМЕНЕНИЕ КОЛИЧЕСТВА ТОВАРА В МОДАЛЬНОМ ОКНЕ (копия скрипта для обнуления счётчика) */
+
+		$('.modal__counter').each(function() {
+			  var spinner = $(this),
+				input = spinner.find('input[type="number"]'),
+				btnUp = spinner.find('.modal__counter--plus'),
+				btnDown = spinner.find('.modal__counter--minus'),
+				min = input.attr('min'),
+				max = input.attr('max');
+
+			  btnUp.click(function() {
+				var oldValue = parseFloat(input.val());
+				if (oldValue >= max) {
+				  var newVal = oldValue;
+				} else {
+				  var newVal = oldValue + 1;
+				}
+				spinner.find("input").val(newVal);
+				spinner.find("input").trigger("change");
+			  });
+
+			  btnDown.click(function() {
+				var oldValue = parseFloat(input.val());
+				if (oldValue <= min) {
+				  var newVal = oldValue;
+				} else {
+				  var newVal = oldValue - 1;
+				}
+				spinner.find("input").val(newVal);
+				spinner.find("input").trigger("change");
+			  });
+			});
+		
+		
+		/* ОПРЕДЕЛЕНИЕ НАПОЛНЕННОСТИ КОРЗИНЫ */
+	
+		var cartContent = $.trim($(".cart-content__item-name").html()).length;
+	//	console.log(cartContent);
+	//	console.log(typeof cartContent);
+
+		if (cartContent !== 0) {
+			$(".cart-content__empty-line").css("display", "none");
+//			console.log("Корзина не пуста");
+		} else {
+			$(".cart-content__full").css("display", "block");
+//			console.log("Корзина пуста");
+		}
+		
+		
+		/* ПОДСЧЁТ КОЛИЧЕСТВА ТОВАРОВ В КОРЗИНЕ */
+
+		$(".cart-content__item-counter-bttn").on("click", function() {
+
+			var totalCount = 0;
+
+			$(".cart-content__item").each(function() {
+				var count = parseInt($(this).find(".cart-content__item-counter-num").prop("value"));
+	//			console.log("count is " + count);
+	//			console.log(typeof count);
+
+				totalCount = totalCount + count;
+	//			console.log("totalCount is " + totalCount);
+	//			console.log(typeof totalCount);
+			});
+
+
+	//		console.log("totalCount is " + totalCount);
+	//		console.log(typeof totalCount);
+
+			$(".cart-title__box-total-count").html(totalCount);
+		});
+		
 	
 	});
 	
@@ -476,6 +564,20 @@ $(function(){
 	
 	$(".cart-content__item-close").on("click", function() {
 		$(this).parents(".cart-content__item").remove();
+		
+		/* ОПРЕДЕЛЕНИЕ НАПОЛНЕННОСТИ КОРЗИНЫ */
+
+		var cartContent = $.trim($(".cart-content__item-name").html()).length;
+	//	console.log(cartContent);
+	//	console.log(typeof cartContent);
+
+		if (cartContent !== 0) {
+			$(".cart-content__empty-line").css("display", "none");
+			console.log("Корзина не пуста");
+		} else {
+			$(".cart-content__full").css("display", "block");
+			console.log("Корзина пуста");
+		}
 	});
 	
 	
