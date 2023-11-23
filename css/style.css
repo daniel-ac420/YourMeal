@@ -1016,10 +1016,10 @@ input[type=number] {
 /* ↑↑↑ 414px ↑↑↑ */
 
 
-@media (min-width: 425px) {
+@media (min-width: 430px) {
 	
 	.wrapper {
-		max-width: 425px;
+		max-width: 430px;
 	}
 	
 	/* ↓ HEADER ↓ */
@@ -1038,7 +1038,7 @@ input[type=number] {
 	
 	/* ↑ CART ↑ */
 }
-/* ↑↑↑ 425px ↑↑↑ */
+/* ↑↑↑ 430px ↑↑↑ */
 
 
 @media (min-width: 540px) {
